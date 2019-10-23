@@ -35,13 +35,13 @@
 
   ```properties
   realm.authenticationProviders = ldap
-  realm.ldap.server = ldap://ldap.olavoice.com:389
-  realm.ldap.username = visitor
-  realm.ldap.password = s3voice
+  realm.ldap.server = xxxxxxxx
+  realm.ldap.username = xxxxx
+  realm.ldap.password = xxxxx
   realm.ldap.maintainTeams = true
-  realm.ldap.accountBase = ou=voice,dc=olavoice,dc=com
+  realm.ldap.accountBase = ou=xxx,dc=xxx,dc=com
   realm.ldap.accountPattern = (&(objectClass=person)(sAMAccountName=${username}))
-  realm.ldap.groupBase = ou=voice,dc=olavoice,dc=com
+  realm.ldap.groupBase = ou=xxx,dc=xxx,dc=com
   #Gitblit网页上的过滤，只能查看到【Git_】开头的组(域控中存在几个git的安全组，名字为Git_Application)
   realm.ldap.groupMemberPattern = (&(objectClass=group)(name=Git_*)(member=${dn}))
   realm.ldap.admins = @Git_Admins
@@ -53,7 +53,7 @@
   # 不显示默认的http协议的仓库地址
   web.showHttpServletUrls = false
   # 显示自定义的http协议的仓库地址
-  web.otherUrls = http\://git.olavoice.com/gitserver/r/{0}
+  web.otherUrls = xxxxx
   # 针对otherUrls开启权限控制
   web.advertiseAccessPermissionForOtherUrls = true
   # 页面上不允许fork
@@ -91,7 +91,7 @@
 - 使用vi编辑器编辑~/git_repositories/gitblit.properties文件，命令为:`vi ~/git_repositories/gitblit.properties`,在文件中添加如下
 
   ```properties
-  federation.passphrase=voice-olami
+  federation.passphrase=XXXX
   ```
 
 - 重新启动tomcat-gitblit服务，在catalina.out文件中找到如下内容,拷贝出来，留待后用
